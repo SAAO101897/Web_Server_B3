@@ -14,7 +14,6 @@ WEB_PORT = 80 # Puerto HTTP para la API
 
 # --- Configuración de la base de datos PostgreSQL para tu RDS ---
 # En un entorno de producción avanzado, se recomienda usar variables de entorno.
-# Por ahora, usamos los valores que proporcionaste para que funcione directamente.
 DB_CONFIG = {
     "dbname": os.environ.get("DB_NAME"),
     "user": os.environ.get("DB_USER"),
