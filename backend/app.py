@@ -15,11 +15,11 @@ WEB_PORT = 80 # Puerto HTTP para la API
 # --- Configuración de la base de datos PostgreSQL para tu RDS ---
 # En un entorno de producción avanzado, se recomienda usar variables de entorno.
 DB_CONFIG = {
-    "dbname": os.environ.get("DB_NAME"),
-    "user": os.environ.get("DB_USER"),
-    "password": os.environ.get("DB_PASS"),
-    "host": os.environ.get("DB_HOST"),
-    "port": os.environ.get("DB_PORT")
+    "dbname": "postgres",
+    "user": "postgres",
+    "password": "Samir0712.",
+    "host": "database-1.c69okc2a6bg9.us-east-1.rds.amazonaws.com",
+    "port": "5432"
 }
 
 # --- 2. CONEXIÓN Y CONFIGURACIÓN DE POSTGRESQL ---
