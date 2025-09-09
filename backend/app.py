@@ -10,7 +10,7 @@ from flask_cors import CORS
 # --- 1. CONFIGURACIÓN DEL SERVIDOR ---
 HOST = '0.0.0.0'
 UDP_PORT = 5001
-WEB_PORT = 80 # Puerto HTTP para la API
+WEB_PORT = 3000 # Puerto HTTP para la API
 
 # --- Configuración de la base de datos PostgreSQL para tu RDS ---
 # En un entorno de producción avanzado, se recomienda usar variables de entorno.
