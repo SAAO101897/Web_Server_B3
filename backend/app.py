@@ -15,7 +15,7 @@ WEB_PORT = 3000 # Puerto HTTP para la API
 # --- Configuración de la base de datos PostgreSQL para tu RDS ---
 # En un entorno de producción avanzado, se recomienda usar variables de entorno.
 DB_CONFIG = {
-    "dbname": "postgres",
+    "dbname": "datos_gps",
     "user": "postgres",
     "password": "Samir0712.",
     "host": "database-1.c69okc2a6bg9.us-east-1.rds.amazonaws.com",
