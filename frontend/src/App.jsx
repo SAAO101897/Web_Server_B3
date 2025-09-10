@@ -4,7 +4,7 @@ import 'leaflet/dist/leaflet.css';
 
 // --- CONFIGURACIÓN ---
 // URL de la API que se ejecuta en tu instancia EC2.
-const API_URL = 'http://100.26.28.196/api/latest_location';
+const API_URL = 'http://34.238.221.207/api/latest_location';
 const REFRESH_INTERVAL_MS = 5000; // Refrescar los datos cada 5 segundos
 
 function App() {
