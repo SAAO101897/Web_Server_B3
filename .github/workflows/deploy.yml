@@ -1,0 +1,35 @@
+name: Deploy with OIDC
+on:
+  push:
+    branches: [main]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: arn:aws:iam::185847270085/GitHubActionsRole
+        aws-region: us-east-1
+        script: |
+          cd /var/www/pantera
+          sudo git fetch origin
+          sudo git reset --hard origin/main
+          sudo chown -R ubuntu:www-data /var/www/pantera
+          cd backend
+          source venv/bin/activate
+          pip install -r requirements.txt
+          deactivate
+          cd ../frontend
+          npm install
+          npm run build
+          sudo systemctl restart pantera-backend
+          sudo systemctl reload nginx
+          echo "Deployment completed successfully"
