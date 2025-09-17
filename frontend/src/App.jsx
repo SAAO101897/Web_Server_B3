@@ -72,7 +72,7 @@ function App() {
         </div>
         <div className='bg-white/20 text-white inline-block py-8 px-8 w-full rounded-3xl'>
           <div className='flex justify-center'>
-            <img className='rounded-full size-60 mb-8 shadow-2xl' src="logo.png" alt="Logo Pantera" />
+            <img className='rounded-full size-100 mb-8 shadow-2xl' src="logo.png" alt="Logo Pantera" />
           </div>
           <h2 className='text-3xl font-bold text-center'>Coordenadas</h2>
           {error ? (
